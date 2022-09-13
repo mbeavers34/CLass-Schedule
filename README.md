@@ -27,9 +27,9 @@ This means we only have sometime 3 or 4 data points per year to train from, and 
 The pandemic also seemed to cause some data inversions that might not otherwise exist. 
 
 The Model:
-The model I finally chose was GradientBoostingRegressor with a Gridsearch CV to find the most accurate parameters. 
+The model I finally chose was GradientBoostingRegressor with a Gridsearch CV to find the most accurate parameters. It was actually the slowest of the models I tested but ran without any warnings due to the limited training data. 
 
 Conclusion:
-The model predicts the class numbers reasonably well, enough that if it predicts more students than a class can hold, I would feel comfortable scheduling a new class section.
-With that being said, it would also be useful to train with the added data of the number of students in the major I am trying to predict. Sometime just adding or removing a particular year’s data
+The model predicts the class numbers reasonably well, enough that if it predicts more students than a class can hold, I would feel comfortable scheduling a new class section. The other models predicted the same number of students adding to my confidence
+With that being said, it would also be useful to train with additional years of data. Also training with  the number of students in the major I am trying to predict would be of benifit. Sometime just adding or removing a particular year’s data
 cause the model to predict more students in a class than there were in the entire major. I feel confident that a few more years of data will fix the overshoot problem.
